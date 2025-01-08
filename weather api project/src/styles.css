@@ -1,0 +1,73 @@
+:root {
+  --font-stack: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-stack);
+  padding: 2rem 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  height: 250px;
+  font-weight: 500;
+}
+
+.current-temperature {
+  font-size: 1.5rem;
+}
+
+.current-feels-like-temperature {
+  font-size: 1.25rem;
+}
+
+.current-location {
+  font-size: 1.33rem;
+}
+
+.current-condition-description {
+  font-size: 2rem;
+}
+
+.local-time {
+  font-size: 1.1rem;
+}
+
+section {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  place-items: center;
+  row-gap: 2rem;
+  margin-top: 2rem;
+}
+
+section div {
+  border-radius: 16px;
+  box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, .25);
+  height: 70px;
+  width: 275px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: linear-gradient(135deg, rgba(150, 150, 150, .1) 0%, rgba(200, 200, 200, 0.1) 50%, rgba(150, 150, 150, .1) 100%);
+}
+
+section div p:nth-of-type(1) {
+  font-size: 1.1rem;
+}
+
+section div p:nth-of-type(2) {
+  font-size: 1.25rem;
+}
